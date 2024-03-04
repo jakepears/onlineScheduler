@@ -20,8 +20,7 @@
 // TODO: Add code to get any user input that was saved in localStorage and set
 // the values of the corresponding textarea elements. HINT: How can the id
 // attribute of each time-block be used to do this?
-//
-// TODO: Add code to display the current date in the header of the page.
+
 const hours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 
 hours.forEach((hour) => {
@@ -70,3 +69,5 @@ const updateHourlyBlocks = () => {
 
 // Add current date to header
 $('#currentDay').text(dayjs().format('h:mm A : dddd - MMMM D, YYYY'));
+
+// Get any user input that was saved in localStorage and set the values of the corresponding textarea elements

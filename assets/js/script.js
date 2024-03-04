@@ -29,15 +29,44 @@ hours.forEach((hour) => {
 	const row = `
     <div id="hour-${hour}" class="row time-block">
       <div class="col-2 col-md-1 hour text-center py-3">${
-				hour === 13 ? 1 : hour === 14 ? 2 : hour
+				hour === 13
+					? 1
+					: hour === 14
+					? 2
+					: hour === 15
+					? 3
+					: hour === 16
+					? 4
+					: hour === 17
+					? 5
+					: hour
 			}PM</div>
-      <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+      <textarea class="col-8 col-md-10 description" rows="3"></textarea>
       <button class="btn saveBtn col-2 col-md-1" aria-label="save">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
     </div>
   `;
-
 	// Append new row to container
 	$('.container').append(row);
 });
+
+// Add past, present, or future class to each time block
+const updateHourlyBlocks = () => {
+	let currentHour = dayjs().hour();
+
+	$('.time-block').each((index, element) => {
+		const hour = parseInt(element.id.split('-')[1]);
+
+		if (hour < currentHour) {
+			$(element).addClass('past');
+		} else if (hour === currentHour) {
+			$(element).addClass('present');
+		} else {
+			$(element).addClass('future');
+		}
+	});
+};
+
+// Add current date to header
+$('#currentDay').text(dayjs().format('h:mm A : dddd - MMMM D, YYYY'));

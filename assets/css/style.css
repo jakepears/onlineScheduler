@@ -1,0 +1,80 @@
+/** @format */
+:root {
+	--primary: #2a3133;
+	--secondary: #fff;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-size: 120%;
+	font-variation-settings: 'slnt' 0;
+	background-color: var(--primary);
+	color: var(--secondary);
+}
+
+textarea {
+	background: transparent;
+	resize: none;
+	color: var(--secondary);
+	border-left: 2px solid var(--secondary);
+	padding: 1em;
+}
+
+header {
+	margin-left: 5em;
+}
+
+#currentDay {
+	font-size: 120%;
+}
+
+.container {
+	padding: 1em;
+}
+
+.description {
+	white-space: pre-wrap;
+}
+
+.time-block {
+	border-radius: 15px;
+}
+
+.row {
+	border-top: 1px solid var(--secondary);
+}
+
+.hour {
+	background-color: var(--primary);
+	color: var(--secondary);
+}
+
+.past {
+	background-color: #d3d3d3;
+	color: var(--secondary);
+}
+
+.present {
+	background-color: #ff6961;
+	color: var(--secondary);
+}
+
+.future {
+	background-color: #77dd77;
+	color: var(--secondary);
+}
+
+.saveBtn {
+	border-left: 1px solid black;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: #06aed5;
+	color: var(--secondary);
+}
+
+.saveBtn i:hover {
+	font-size: 140%;
+	transition: all 0.3s ease-in-out;
+}

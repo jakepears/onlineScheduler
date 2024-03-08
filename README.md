@@ -29,7 +29,7 @@ The deployed application can be accessed by clicking on the following link: [Onl
 
 ## Screenshot
 
-![Online Planner](./assets/screenshots/mockQuiz.png)
+![Online Planner](./assets/imgs/onlinePlanner.png)
 
 ## License
 

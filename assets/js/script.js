@@ -67,7 +67,32 @@ const updateHourlyBlocks = () => {
 	});
 };
 
+// Change color of time blocks based on past, present, or future
+updateHourlyBlocks();
+
 // Add current date to header
-$('#currentDay').text(dayjs().format('h:mm A : dddd - MMMM D, YYYY'));
+const setCurrentTime = () => {
+	$('#currentDay').text(dayjs().format('h:mm:ss A : dddd - MMMM D, YYYY'));
+};
+
+setInterval(setCurrentTime, 1000);
 
 // Get any user input that was saved in localStorage and set the values of the corresponding textarea elements
+const loadSavedData = () => {
+	hours.forEach((hour) => {
+		const savedData = localStorage.getItem(`hour-${hour}`);
+		if (savedData) {
+			$(`#hour-${hour} .description`).val(savedData);
+		}
+	});
+};
+
+// Save user input in local storage
+$('.container').on('click', '.saveBtn', function () {
+	const hour = $(this).parent().attr('id');
+	const description = $(this).siblings('.description').val();
+	localStorage.setItem(hour, description);
+});
+
+updateHourlyBlocks();
+loadSavedData();

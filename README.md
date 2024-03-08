@@ -25,7 +25,7 @@ To use the application, click on the link provided in the installation section. 
 
 ## Deployed Application
 
-The deployed application can be accessed by clicking on the following link: [Online Planner](https://jakepears.github.io/onlinePlanner/)
+The deployed application can be accessed by clicking on the following link: [Online Planner](https://jakepears.github.io/onlineScheduler/)
 
 ## Screenshot
 
